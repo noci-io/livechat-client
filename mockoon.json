@@ -1,0 +1,328 @@
+{
+    "source": "mockoon:1.7.0",
+    "data": [
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "",
+                "lastMigration": 9,
+                "name": "Digitalize-Livechat-Server",
+                "endpointPrefix": "api",
+                "latency": 0,
+                "port": 3001,
+                "routes": [
+                    {
+                        "uuid": "",
+                        "documentation": "Create conversation",
+                        "method": "post",
+                        "endpoint": "conversation",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"id\": \"{{ guid }}\"\n}",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Add message in conversation",
+                        "method": "post",
+                        "endpoint": "conversation/*/message",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"id\": \"{{ guid }}\"\n}",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Add message in conversation",
+                        "method": "get",
+                        "endpoint": "conversation/*/messages",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t},\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t},\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t},\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t},\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t},\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t},\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t},\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t},\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t},\n\t{\n\t\t\"id\": \"{{ guid }}\",\n\t\t\"date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n\t\t\"message\": \"{{ lorem }}\",\n\t\t\"from\": \"{{ oneOf (array 'system' 'visitor') }}\",\n\t\t\"seen\": true,\n\t\t\"seen_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\"\n\t}\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Close conversation",
+                        "method": "delete",
+                        "endpoint": "conversation/*",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n    \"status\": true\n}",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Acknowledge messages in conversation",
+                        "method": "put",
+                        "endpoint": "conversation/*/messages/acknowledge",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n    \"status\": true\n}",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Handle conversation as agent",
+                        "method": "put",
+                        "endpoint": "conversation/*/messages/handle",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n    \"status\": true\n}",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Transfer conversation to another agent",
+                        "method": "put",
+                        "endpoint": "conversation/*/messages/transfer",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n    \"status\": true\n}",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "List conversations",
+                        "method": "get",
+                        "endpoint": "conversations",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    }\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "List archived conversations",
+                        "method": "get",
+                        "endpoint": "conversations/archived",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"created_at\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"last_message_date\": \"{{ date '2020-01-01' '2020-04-01' 'YYYY-MM-DDTHH:mm:ss.SSSZ' }}\",\n        \"unread_messages_count\": {{ int 0 6 }}\n    }\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "List agents",
+                        "method": "get",
+                        "endpoint": "agents",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"photo\": \"https://placekitten.com/128/128\",\n        \"active\": true\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"photo\": \"https://placekitten.com/128/128\",\n        \"active\": true\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"photo\": \"https://placekitten.com/128/128\",\n        \"active\": true\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"photo\": \"https://placekitten.com/128/128\",\n        \"active\": true\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"photo\": \"https://placekitten.com/128/128\",\n        \"active\": true\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"photo\": \"https://placekitten.com/128/128\",\n        \"active\": true\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"photo\": \"https://placekitten.com/128/128\",\n        \"active\": true\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"photo\": \"https://placekitten.com/128/128\",\n        \"active\": true\n    },\n    {\n        \"id\": \"{{ guid }}\",\n        \"name\": \"{{ firstName }} {{ lastName }}\",\n        \"photo\": \"https://placekitten.com/128/128\",\n        \"active\": true\n    }\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Count agents",
+                        "method": "get",
+                        "endpoint": "agents/count",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n    \"count\": 8\n}",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Change agent status",
+                        "method": "put",
+                        "endpoint": "agent/*/status",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n    \"status\": true\n}",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            }
+                        ],
+                        "enabled": true
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "https": false,
+                "cors": true,
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ]
+            }
+        }
+    ]
+}
